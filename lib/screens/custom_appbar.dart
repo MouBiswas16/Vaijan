@@ -17,18 +17,21 @@ class _CustomAppBarState extends State<CustomAppBar> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 80,
+      height: 70,
       color: Color(0xff612A6F),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(
-            Icons.dehaze,
-            size: 20,
-            color: Colors.white,
+          Padding(
+            padding: const EdgeInsets.all(13),
+            child: Icon(
+              Icons.dehaze,
+              size: 20,
+              color: Colors.white,
+            ),
           ),
-          SizedBox(width: 15),
+          SizedBox(width: 50),
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -67,12 +70,13 @@ class _CustomAppBarState extends State<CustomAppBar> {
                       ),
                       AnimatedOpacity(
                         opacity: _isBallance ? 1 : 0,
-                        duration: Duration(milliseconds: 300),
+                        duration: Duration(milliseconds: 400),
                         child: Text(
-                          "Tap For Balance",
+                          '''   ব্যালেন্স জানতে ট্যাপ করুন''',
                           style: TextStyle(
                             color: Color(0xff612A6F),
-                            fontSize: 14,
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -104,12 +108,11 @@ class _CustomAppBarState extends State<CustomAppBar> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.all(8),
+            padding: EdgeInsets.only(right: 13),
             child: CircleAvatar(
               backgroundImage: AssetImage("assets/images/User Image.jpg"),
             ),
           ),
-          SizedBox(width: 5),
         ],
       ),
     );
