@@ -38,7 +38,13 @@ class _VehicleChoosingState extends State<VehicleChoosing> {
                       ),
                     ),
                     child: Center(
-                      child: CircleAvatar(),
+                      child: CircleAvatar(
+                        radius: 20,
+                        child: ClipRRect(
+                          child:
+                              Image.asset("assets/images/motorbike_pic_1.png"),
+                        ),
+                      ),
                     ),
                   ),
                 ],
